@@ -10,7 +10,7 @@ export async function createQuestion(req: Request, res: Response) {
 }
 
 export async function createAnswer(req: Request, res: Response) {
-  await answerRepository.createAnswer({...req.body,questionId:req.params.id});
+  await answerRepository.createAnswer({...req.body,questionId:Number(req.params.id)});
   res.sendStatus(201);
 }
 

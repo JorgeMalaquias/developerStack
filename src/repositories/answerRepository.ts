@@ -1,6 +1,5 @@
 import { TypeCreateAnswer } from "../types/answerTypes";
 import { prisma } from "../config/database";
-import { Questions } from "@prisma/client";
 
 export async function createAnswer({answer,answeredBy,questionId}:TypeCreateAnswer){
     await prisma.answers.create({
