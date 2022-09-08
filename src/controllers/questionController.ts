@@ -20,6 +20,6 @@ export async function get(req: Request, res: Response) {
 }
 
 export async function getById(req: Request, res: Response) {
-  const question = answerRepository.getById(Number(req.params.id));
+  const question = await answerRepository.getById(Number(req.params.id));
   res.send({question});
 }

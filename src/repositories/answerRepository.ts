@@ -26,4 +26,5 @@ export async function getById(id:number){
             }
         },
     })
+    return question;
 }
